@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador y Desencriptador de Texto</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <h1>Encriptador y Desencriptador de Texto</h1>
+    <p>Nota: No se aceptarán mayúsculas ni caracteres especiales.</p>
+    
+    <div class="container">
+        <div class="input-section">
+            <textarea id="inputText" placeholder="Introduce tu texto aquí..."></textarea>
+            <button id="encryptBtn">Cifrar</button>
+            <button id="decryptBtn">Descifrar</button>
+        </div>
+        <div class="output-section">
+            <p id="outputText" style="display: none;"></p>
+            <button id="copyBtn" style="display: none;">Copiar</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Creado por [Rubén Eduardo Rojas Santa], 2024</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
