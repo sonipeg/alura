@@ -1,4 +1,4 @@
-// Declaración de variables
+//variables
 const inputText = document.getElementById('inputText');
 const outputText = document.getElementById('outputText');
 const encryptBtn = document.getElementById('encryptBtn');
