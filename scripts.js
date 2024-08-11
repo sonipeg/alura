@@ -5,16 +5,16 @@ const encryptBtn = document.getElementById('encryptBtn');
 const decryptBtn = document.getElementById('decryptBtn');
 const copyBtn = document.getElementById('copyBtn');
 
-// Clave secreta para el cifrado
+// Clave
 const secretKey = 'mySecretKey12345';
 
-// Función de validación
+//validación
 function validateText(text) {
     const regex = /^[a-zA-Z0-9\s]*$/;
     return regex.test(text);
 }
 
-// Función de encriptado
+//encriptado
 function encryptText(text) {
     if (!validateText(text)) {
         alert('No se aceptan caracteres especiales.');
@@ -23,13 +23,13 @@ function encryptText(text) {
     return CryptoJS.AES.encrypt(text, secretKey).toString();
 }
 
-// Función de desencriptado
+//desencriptado
 function decryptText(cipherText) {
     const bytes = CryptoJS.AES.decrypt(cipherText, secretKey);
     return bytes.toString(CryptoJS.enc.Utf8);
 }
 
-// Evento de encriptar
+// encriptar
 encryptBtn.addEventListener('click', () => {
     const text = inputText.value;
     const encrypted = encryptText(text);
@@ -38,7 +38,7 @@ encryptBtn.addEventListener('click', () => {
     copyBtn.style.display = 'inline-block';
 });
 
-// Evento de desencriptar
+//desencriptar
 decryptBtn.addEventListener('click', () => {
     const cipherText = inputText.value;
     const decrypted = decryptText(cipherText);
@@ -47,7 +47,7 @@ decryptBtn.addEventListener('click', () => {
     copyBtn.style.display = 'inline-block';
 });
 
-// Función de copiar al portapapeles
+//portapapeles
 copyBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(outputText.textContent).then(() => {
         alert('Texto copiado al portapapeles');
@@ -56,7 +56,7 @@ copyBtn.addEventListener('click', () => {
     });
 });
 
-// Cambiar el color de los botones a rojo al cargar la página
+// Color botone
 window.onload = () => {
     encryptBtn.style.backgroundColor = '#FF0000';
     decryptBtn.style.backgroundColor = '#FF0000';
